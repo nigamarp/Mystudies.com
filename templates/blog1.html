@@ -1,0 +1,217 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mystudies.com</title>
+    <link rel="stylesheet" href="{% static 'mainprojectapp/ai.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+</head>
+
+<body>
+    <!-- Navigation bar -->
+   <nav>
+    <img src="{% static 'mainprojectapp/logo.png' %}" alt="logo"><a href="/"></a>
+    <div class="navigation">
+       <ul>
+          <li><a href="/">home</a></li>
+          <!----------------------------------->
+          <li><a href="#">CSE<i class="fas fa-caret-down"></i></a>
+          <ul>
+             <li><a href="/blog">blog<a></li>
+             <li><a href="/blog1">blog1</a></li>
+             <li><a href="/blog2">blog2</a></li>
+          </ul>
+          </li>
+          <!------------------------------------>
+          <li><a href="#">ESE<i class="fas fa-caret-down"></i></a>
+             <ul>
+                <li><a href="/blog3">blog3<a></li>
+                <li><a href="/blog4">blog4</a></li>
+                <li><a href="/blog5">blog5</a></li>
+             </ul>
+             </li>
+             <!---------------------------------->
+             <li><a href="#">CHE<i class="fas fa-caret-down"></i></a>
+                <ul>
+                   <li><a href="/blog6">blog6<a></li>
+                   <li><a href="/blog7">blog7</a></li>
+                   <li><a href="/blog8">blog8</a></li>
+                </ul>
+                </li>
+             
+                <li><a href="#">BTE<i class="fas fa-caret-down"></i></a>
+                   <ul>
+                      <li><a href="/blog9">blog9<a></li>
+                      <li><a href="/blog10">blog10</a></li>
+                      <li><a href="/blog11">blog11</a></li>
+                   </ul>
+                   </li>
+             
+       </ul>
+    </div>
+    {% if user.is_authenticated %}
+
+    <div style = "margin-left: 400px;">
+    {{user.username}}
+    </div>
+    <div class="logout-container" style = "Display:flex;">
+          
+       <button type="submit" class="logout"><a href='/logout'>Logout</a></button><!--logout-->
+   </div>
+    {% else %}
+    <div class="login-container">
+         <button type="button" class="signup"><a href ='/signup'>Signup</a></button><!--signup-->
+         <button type="submit" class="login"><a href='/login'>Login</a></button><!--login-->         
+     </div>
+    {% endif %} 
+ </nav>
+
+{% comment %} navbar end {% endcomment %}
+
+    <div class="page">
+        <div class="social">
+            <h2 style="font-family:montserret ; border-bottom: 2px solid black;">Share</h2>
+            <a href="https://facebook.com"><img src="{% static 'mainprojectapp/facebook.png' %}" alt=""></a>
+            <a href="https://instagram.com"><img src="{% static 'mainprojectapp/instagram.png' %}" alt=""></a>
+            <a href="https://twitter.com"><img src="{% static 'mainprojectapp/twitter.png' %}" alt=""></a>
+
+
+            <p class="what">
+            <h1
+                style="text-decoration: underline; color: green; letter-spacing: .2rem; text-transform: uppercase; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                What's&nbspNew</h1>
+            </p>
+            <p style="margin-top:10px; ">
+            <h3 style="border-bottom: 1px solid grey;">ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+                rem?<br>... <a href="/blog7" style="color: rgb(167, 165, 165); font-family: raleway;">Read more</a></h3>
+            </p>
+            <p style="margin-top:10px; ">
+            <h3 style="border-bottom: 1px solid grey;">ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+                rem?<br>... <a href="/blog8" style="color: rgb(167, 165, 165); font-family: raleway;">Read more</a></h3>
+            </p>
+            <p style="margin-top:10px; ">
+            <h3 style="border-bottom: 1px solid grey;">ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+                rem?<br>... <a href="/blog9" style="color: rgb(167, 165, 165); font-family: raleway;">Read more</a></h3>
+            </p>
+        </div>
+
+        <!-- blog start-->
+
+        <div class="blog">
+            <center>
+                <div class="heading">
+                    <p>
+                    <h1
+                        style="text-decoration: underline; margin-bottom: 20px; text-transform: uppercase; text-shadow: 5px; text-decoration: underline; color: rgb(2, 3, 3); font-family: Georgia, 'Times New Roman', Times, serif;">
+                        Artificial Intelligence</h1>
+                    </p>
+                    <h4 style="text-align:left; margin-left: 100px; margin-bottom: 10px; color: rgb(186, 179, 179);">
+                        EDITED ON:- 15-07-6574</h4>
+                </div>
+            </center>
+            <center>
+                <div class="para">
+                    <img src="#" alt="">
+                    <p>What is Artificial Intelligence?
+                        Artificial intelligence (AI) is intelligence demonstrated by machines, as opposed to the natural
+                        intelligence displayed by animals including humans. AI research has been defined as the field of
+                        study of intelligent agents, which refers to any system that perceives its environment and takes
+                        actions that maximize its chance of achieving its goals. <br>
+
+                        The term "artificial intelligence" had previously been used to describe machines that mimic and
+                        display "human" cognitive skills that are associated with the human mind, such as "learning" and
+                        "problem-solving". This definition has since been rejected by major AI researchers who now
+                        describe AI in terms of rationality and acting rationally, which does not limit how intelligence
+                        can be articulated. <br><br>
+
+                        <img src="{% static 'mainprojectapp/ai.png' %}" alt="" style="width: 600px; height:400px; margin-left: 30px;" class="center" ><br><br><br>
+
+                        AI applications include advanced web search engines (e.g., Google), recommendation systems (used
+                        by YouTube, Amazon and Netflix), understanding human speech (such as Siri and Alexa),
+                        self-driving cars (e.g., Tesla), automated decision-making and competing at the highest level in
+                        strategic game systems (such as chess and Go).[2] As machines become increasingly capable, tasks
+                        considered to require "intelligence" are often removed from the definition of AI, a phenomenon
+                        known as the AI effect.[3] For instance, optical character recognition is frequently excluded
+                        from things considered to be AI,[4] having become a routine technology. <br>
+
+                        Artificial intelligence was founded as an academic discipline in 1956, and in the years since
+                        has experienced several waves of optimism,[6][7] followed by disappointment and the loss of
+                        funding (known as an "AI winter"),[8][9] followed by new approaches, success and renewed
+                        funding.[7][10] AI research has tried and discarded many different approaches since its
+                        founding, including simulating the brain, modeling human problem solving, formal logic, large
+                        databases of knowledge and imitating animal behavior. In the first decades of the 21st century,
+                        highly mathematical-statistical machine learning has dominated the field, and this technique has
+                        proved highly successful, helping to solve many challenging problems throughout industry and
+                        academia. <br>
+
+                        The various sub-fields of AI research are centered around particular goals and the use of
+                        particular tools. The traditional goals of AI research include reasoning, knowledge
+                        representation, planning, learning, natural language processing, perception, and the ability to
+                        move and manipulate objects.[c] General intelligence (the ability to solve an arbitrary problem)
+                        is among the field's long-term goals.[12] To solve these problems, AI researchers have adapted
+                        and integrated a wide range of problem-solving techniques—including search and mathematical
+                        optimization, formal logic, artificial neural networks, and methods based on statistics,
+                        probability and economics. AI also draws upon computer science, psychology, linguistics,
+                        philosophy, and many other fields.
+                    </p>
+                    <h2
+                        style="margin-top: 50px; margin-right : 150px;text-align: right; letter-spacing: 2px; font-size: 30px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-decoration: underline;">
+                        Author:- Raptor
+                    </h2>
+                </div>
+
+            </center>
+        </div>
+    </div>
+
+    <!-- blog ends here -->
+
+    <!-- footer -->
+    <footer>
+        <div class="footercol">
+            <img src="{% static 'mainprojectapp/tlogo.png' %}" alt="logo">
+          </div>
+          <div class="footercol">
+              <h3>top products</h3>
+              <li>management</li>
+              <li>tools</li>
+              <li>tools</li>
+              <li>tools</li>
+            </div>
+            <div class="footercol">
+              <h3>top products</h3>
+              <li>management</li>
+              <li>tools</li>
+              <li>tools</li>
+              <li>tools</li>
+            </div>
+            <div class="footercol">
+              <h3>top products</h3>
+              <li>management</li>
+              <li>tools</li>
+              <li>tools</li>
+              <li>tools</li>
+            </div>
+            <div class="footercol">
+              <h3>top products</h3>
+              <li>management</li>
+              <li>tools</li>
+              <li>tools</li>
+              <li>tools</li>
+            </div>
+            <div class="copyright">copyright &copy All rights reserved</div>
+            <div class="slinks">
+              <a href="https://twitter.com"><i class="fab fa-twitter fa-2x"></i></a>
+              <a href="https://instagram.com"><i class="fab fa-instagram fa-2x"></i></a>
+              <a href="https://linkedin.com"><i class="fab fa-linkedin-in fa-2x"></i></a>
+            </div>
+          </div>
+     </footer>
+
+
+</body>
+
+</html>
