@@ -1,0 +1,233 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mystudies.com</title>
+    <link rel="stylesheet" href="{% static 'mainprojectapp/blog.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+</head>
+
+<body>
+    <nav>
+        <a href="/"><img src="{% static 'mainprojectapp/logo.png' %}" alt="logo"><a href="/"></a>
+        <div class="navigation">
+            <ul>
+                <li><a href="/">home</a></li>
+                <!----------------------------------->
+                <li><a href="#">CSE<i class="fas fa-caret-down"></i></a>
+                    <ul>
+                        <li><a href="/blog">blog<a></li>
+                        <li><a href="/blog1">blog1</a></li>
+                        <li><a href="/blog2">blog2</a></li>
+                    </ul>
+                </li>
+                <!------------------------------------>
+                <li><a href="#">ESE<i class="fas fa-caret-down"></i></a>
+                    <ul>
+                        <li><a href="/blog3">blog3<a></li>
+                        <li><a href="/blog4">blog4</a></li>
+                        <li><a href="/blog5">blog5</a></li>
+                    </ul>
+                </li>
+                <!---------------------------------->
+                <li><a href="#">CHE<i class="fas fa-caret-down"></i></a>
+                    <ul>
+                        <li><a href="/blog6">blog6<a></li>
+                        <li><a href="/blog7">blog7</a></li>
+                        <li><a href="/blog8">blog8</a></li>
+                    </ul>
+                </li>
+                <!----------------------------------->
+                <li><a href="#">BTE<i class="fas fa-caret-down"></i></a>
+                    <ul>
+                        <li><a href="/blog9">blog9<a></li>
+                        <li><a href="/blog10">blog10</a></li>
+                        <li><a href="/blog11">blog11</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+   <!-- Navigation bar -->
+   <nav>
+    <img src="{% static 'mainprojectapp/logo.png' %}" alt="logo">
+    <div class="navigation">
+       <ul>
+          <li><a href="#">home</a></li>
+          <!----------------------------------->
+          <li><a href="#">CSE<i class="fas fa-caret-down"></i></a>
+          <ul>
+             <li><a href="/blog">blog<a></li>
+             <li><a href="/blog1">blog1</a></li>
+             <li><a href="/blog2">blog2</a></li>
+          </ul>
+          </li>
+          <!------------------------------------>
+          <li><a href="#">ESE<i class="fas fa-caret-down"></i></a>
+             <ul>
+                <li><a href="/blog3">blog3<a></li>
+                <li><a href="/blog4">blog4</a></li>
+                <li><a href="/blog5">blog5</a></li>
+             </ul>
+             </li>
+             <!---------------------------------->
+             <li><a href="#">CHE<i class="fas fa-caret-down"></i></a>
+                <ul>
+                   <li><a href="/blog6">blog6<a></li>
+                   <li><a href="/blog7">blog7</a></li>
+                   <li><a href="/blog8">blog8</a></li>
+                </ul>
+                </li>
+             
+                <li><a href="#">BTE<i class="fas fa-caret-down"></i></a>
+                   <ul>
+                      <li><a href="/blog9">blog9<a></li>
+                      <li><a href="/blog10">blog10</a></li>
+                      <li><a href="/blog11">blog11</a></li>
+                   </ul>
+                   </li>
+             
+       </ul>
+    </div>
+    {% if user.is_authenticated %}
+
+    <div style = "margin-left: 400px;">
+    {{user.username}}
+    </div>
+    <div class="logout-container" style = "Display:flex;">
+          
+       <button type="submit" class="logout"><a href='/logout'>Logout</a></button><!--logout-->
+   </div>
+    {% else %}
+    <div class="login-container">
+         <button type="button" class="signup"><a href ='/signup'>Signup</a></button><!--signup-->
+         <button type="submit" class="login"><a href='/login'>Login</a></button><!--login-->         
+     </div>
+    {% endif %} 
+ </nav>
+
+{% comment %} navbar end {% endcomment %}     
+
+
+    <div class="page">
+        <div class="social">
+            <h2 style="font-family:montserret ; border-bottom: 2px solid black;">Share</h2>
+            <a href="https://facebook.com"><img src="{% static 'mainprojectapp/facebook.png' %}" alt=""></a>
+            <a href="https://instagram.com"><img src="{% static 'mainprojectapp/instagram.png' %}" alt=""></a>
+            <a href="https://twitter.com"><img src="{% static 'mainprojectapp/twitter.png' %}" alt=""></a>
+
+
+            <p class="what">
+            <h1
+                style="text-decoration: underline; color: green; letter-spacing: .2rem; text-transform: uppercase; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                What's&nbspNew</h1>
+            </p>
+            <p style="margin-top:10px; ">
+            <h3 style="border-bottom: 1px solid grey;">ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+                rem?<br>... <a href="/blog1" style="color: rgb(167, 165, 165); font-family: raleway;">Read more</a></h3>
+            </p>
+            <p style="margin-top:10px; ">
+            <h3 style="border-bottom: 1px solid grey;">ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+                rem?<br>... <a href="/blog4" style="color: rgb(167, 165, 165); font-family: raleway;">Read more</a></h3>
+            </p>
+            <p style="margin-top:10px; ">
+            <h3 style="border-bottom: 1px solid grey;">ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+                rem?<br>... <a href="/blog6" style="color: rgb(167, 165, 165); font-family: raleway;">Read more</a></h3>
+            </p>
+        </div>
+
+
+        <!-- blog start-->
+
+        <div class="blog">
+            <center>
+                <div class="heading">
+                    <p>
+                    <h1
+                        style="text-decoration: underline; margin-bottom: 20px; text-transform: uppercase; text-shadow: 5px; text-decoration: underline; color: rgb(2, 3, 3); font-family: Georgia, 'Times New Roman', Times, serif;">
+                        <em>INTERNET OF THINGS</em>
+                    </h1>
+                    </p>
+                    <h4 style="text-align:left; margin-left: 100px; margin-bottom: 10px; color: rgb(186, 179, 179);">
+                        EDITED ON:- 25-07-2022</h4>
+                </div>
+            </center>
+            <center>
+                <div class="para">
+                    <img src="#" alt="">
+                    <p style="font-size: 20px;"><b>What  is IOT?</b> <br><br>
+                        The Internet of Things, or IoT, refers to the billions of physical devices around the world that are now connected to the internet, all collecting and sharing data. Thanks to the arrival of super-cheap computer chips and the ubiquity of wireless networks, it's possible to turn anything, from something as small as a pill to something as big as an aeroplane, into a part of the IoT. <br>Connecting up all these different objects and adding sensors to them adds a level of digital intelligence to devices that would be otherwise dumb, enabling them to communicate real-time data without involving a human being.<br> The Internet of Things is making the fabric of the world around us more smarter and more responsive, merging the digital and physical universes. <br><br>
+
+                        <img src="{% static 'mainprojectapp/io.jpg' %}" alt="" style="width: 600px; height:400px; margin-left: 30px;"
+                            class="center"><br><br>
+                            
+                               <b> Benefits for customers</b><br><br>
+                            
+                               The IoT promises to make our environment -- our homes and offices and vehicles -- smarter, more measurable, and... chattier. Smart speakers like Amazon's Echo and Google Home make it easier to play music, set timers, or get information. <br>Home security systems make it easier to monitor what's going on inside and outside, or to see and talk to visitors. Meanwhile, smart thermostats can help us heat our homes before we arrive back, and smart lightbulbs can make it look like we're home even when we're out.<br><br>
+                         <img src="{% static 'mainprojectapp/int.webp' %}" alt="" style=" width: 600px; height:400px; margin-left: 30px;"
+                            class="center"><br><br>
+
+
+                        
+                    </p>
+                    <h2
+                        style="margin-top: 50px; margin-right : 150px;text-align: right; letter-spacing: 2px; font-size: 30px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-decoration: underline;">
+                        Author:- Griff Storm
+                    </h2>
+                </div>
+
+            </center>
+        </div>
+    </div>
+
+    <!-- blog ends here -->
+
+    <!-- footer -->
+    <footer>
+        <div class="footercol">
+            <img src="{% static 'mainprojectapp/tlogo.png' %}" alt="logo">
+          </div>
+          <div class="footercol">
+              <h3>top products</h3>
+              <li>management</li>
+              <li>tools</li>
+              <li>tools</li>
+              <li>tools</li>
+            </div>
+            <div class="footercol">
+              <h3>top products</h3>
+              <li>management</li>
+              <li>tools</li>
+              <li>tools</li>
+              <li>tools</li>
+            </div>
+            <div class="footercol">
+              <h3>top products</h3>
+              <li>management</li>
+              <li>tools</li>
+              <li>tools</li>
+              <li>tools</li>
+            </div>
+            <div class="footercol">
+              <h3>top products</h3>
+              <li>management</li>
+              <li>tools</li>
+              <li>tools</li>
+              <li>tools</li>
+            </div>
+            <div class="copyright">copyright &copy All rights reserved</div>
+            <div class="slinks">
+              <a href="https://twitter.com"><i class="fab fa-twitter fa-2x"></i></a>
+              <a href="https://instagram.com"><i class="fab fa-instagram fa-2x"></i></a>
+              <a href="https://linkedin.com"><i class="fab fa-linkedin-in fa-2x"></i></a>
+            </div>
+          </div>
+     </footer>
+
+
+
+</body>
+
+</html>

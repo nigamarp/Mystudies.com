@@ -1,0 +1,209 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mystudies.com</title>
+    <link rel="stylesheet" href="{% static 'mainprojectapp/data.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+</head>
+
+<body>
+   <!-- Navigation bar -->
+   <nav>
+    <img src="{% static 'mainprojectapp/logo.png' %}" alt="logo"><a href="/"></a>
+    <div class="navigation">
+       <ul>
+          <li><a href="/">home</a></li>
+          <!----------------------------------->
+          <li><a href="#">CSE<i class="fas fa-caret-down"></i></a>
+          <ul>
+             <li><a href="/blog">blog<a></li>
+             <li><a href="/blog1">blog1</a></li>
+             <li><a href="/blog2">blog2</a></li>
+          </ul>
+          </li>
+          <!------------------------------------>
+          <li><a href="#">ESE<i class="fas fa-caret-down"></i></a>
+             <ul>
+                <li><a href="/blog3">blog3<a></li>
+                <li><a href="/blog4">blog4</a></li>
+                <li><a href="/blog5">blog5</a></li>
+             </ul>
+             </li>
+             <!---------------------------------->
+             <li><a href="#">CHE<i class="fas fa-caret-down"></i></a>
+                <ul>
+                   <li><a href="/blog6">blog6<a></li>
+                   <li><a href="/blog7">blog7</a></li>
+                   <li><a href="/blog8">blog8</a></li>
+                </ul>
+                </li>
+             
+                <li><a href="#">BTE<i class="fas fa-caret-down"></i></a>
+                   <ul>
+                      <li><a href="/blog9">blog9<a></li>
+                      <li><a href="/blog10">blog10</a></li>
+                      <li><a href="/blog11">blog11</a></li>
+                   </ul>
+                   </li>
+             
+       </ul>
+    </div>
+    {% if user.is_authenticated %}
+
+    <div style = "margin-left: 400px;">
+    {{user.username}}
+    </div>
+    <div class="logout-container" style = "Display:flex;">
+          
+       <button type="submit" class="logout"><a href='/logout'>Logout</a></button><!--logout-->
+   </div>
+    {% else %}
+    <div class="login-container">
+         <button type="button" class="signup"><a href ='/signup'>Signup</a></button><!--signup-->
+         <button type="submit" class="login"><a href='/login'>Login</a></button><!--login-->         
+     </div>
+    {% endif %} 
+ </nav>
+
+{% comment %} navbar end {% endcomment %}
+    <div class="page">
+        <div class="social">
+            <h2 style="font-family:montserret ; border-bottom: 2px solid black;">Share</h2>
+            <a href="https://facebook.com"><img src="{% static 'mainprojectapp/facebook.png' %}" alt=""></a>
+            <a href="https://instagram.com"><img src="{% static 'mainprojectapp/instagram.png' %}" alt=""></a>
+            <a href="https://twitter.com"><img src="{% static 'mainprojectapp/twitter.png' %}" alt=""></a>
+
+
+            <p class="what">
+            <h1
+                style="text-decoration: underline; color: green; letter-spacing: .2rem; text-transform: uppercase; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                What's&nbspNew</h1>
+            </p>
+            <p style="margin-top:10px; ">
+            <h3 style="border-bottom: 1px solid grey;">ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+                rem?<br>... <a href="/blog1" style="color: rgb(167, 165, 165); font-family: raleway;">Read more</a></h3>
+            </p>
+            <p style="margin-top:10px; ">
+            <h3 style="border-bottom: 1px solid grey;">ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+                rem?<br>... <a href="/blog4" style="color: rgb(167, 165, 165); font-family: raleway;">Read more</a></h3>
+            </p>
+            <p style="margin-top:10px; ">
+            <h3 style="border-bottom: 1px solid grey;">ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+                rem?<br>... <a href="/blog6" style="color: rgb(167, 165, 165); font-family: raleway;">Read more</a></h3>
+            </p>
+        </div>
+
+        <!-- blog start-->
+
+        <div class="blog">
+            <center>
+                <div class="heading">
+                    <p>
+                    <h1
+                        style="text-decoration: underline; margin-bottom: 20px; text-transform: uppercase; text-shadow: 5px; text-decoration: underline; color: rgb(2, 3, 3); font-family: Georgia, 'Times New Roman', Times, serif;">
+                        Data Mining</h1>
+                    </p>
+                    <h4 style="text-align:left; margin-left: 100px; margin-bottom: 10px; color: rgb(186, 179, 179);">
+                        EDITED ON:- 15-07-6574</h4>
+                </div>
+            </center>
+            <center>
+                <div class="para">
+                    <img src="#" alt="">
+                    <p style="font-size: 20px;">What is Data Mining? <br>
+                        The process of extracting information to identify patterns, trends, and useful data that would
+                        allow the business to take the data-driven decision from huge sets of data is called Data
+                          <br>
+
+                        In other words, we can say that Data Mining is the process of investigating hidden patterns of
+                        information to various perspectives for categorization into useful data, which is collected and
+                        assembled in particular areas such as data warehouses, efficient analysis, data mining
+                        algorithm, helping decision making and other data requirement to eventually cost-cutting and
+                        generating revenue. <br><br>
+                        
+                        <img src="{% static 'mainprojectapp/data.png' %}" alt="" style="width: 600px; height:600px; margin-left: 30px;"
+                        class="center"><br><br>
+
+
+                        Data mining is the act of automatically searching for large stores of information to find trends
+                        and patterns that go beyond simple analysis procedures. Data mining utilizes complex
+                        mathematical algorithms for data segments and evaluates the probability of future events. Data
+                        Mining is also called Knowledge Discovery of Data (KDD). <br>
+
+                        Data Mining is a process used by organizations to extract specific data from huge databases to
+                        solve business problems. It primarily turns raw data into useful information. <br>
+
+                        Data Mining is similar to Data Science carried out by a person, in a specific situation, on a
+                        particular data set, with an objective. This process includes various types of services such as
+                        text mining, web mining, audio and video mining, pictorial data mining, and social media mining.
+                        It is done through software that is simple or highly specific. By outsourcing data mining, all
+                        the work can be done faster with low operation costs. Specialized firms can also use new
+                        technologies to collect data that is impossible to locate manually. There are tonnes of
+                        information available on various platforms, but very little knowledge is accessible. The biggest
+                        challenge is to analyze the data to extract important information that can be used to solve a
+                        problem or for company development. There are many powerful instruments and techniques available
+                        to mine data and find better insight from it. 
+                    </p>
+                    <h2
+                        style="margin-top: 50px; margin-right : 150px;text-align: right; letter-spacing: 2px; font-size: 30px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-decoration: underline;">
+                        Author:- Raptor
+                    </h2>
+                </div>
+
+            </center>
+        </div>
+    </div>
+
+    <!-- blog ends here -->
+
+    <!-- footer -->
+    <footer>
+        <div class="footercol">
+            <img src="{% static 'mainprojectapp/tlogo.png' %}" alt="logo">
+          </div>
+          <div class="footercol">
+              <h3>top products</h3>
+              <li>management</li>
+              <li>tools</li>
+              <li>tools</li>
+              <li>tools</li>
+            </div>
+            <div class="footercol">
+              <h3>top products</h3>
+              <li>management</li>
+              <li>tools</li>
+              <li>tools</li>
+              <li>tools</li>
+            </div>
+            <div class="footercol">
+              <h3>top products</h3>
+              <li>management</li>
+              <li>tools</li>
+              <li>tools</li>
+              <li>tools</li>
+            </div>
+            <div class="footercol">
+              <h3>top products</h3>
+              <li>management</li>
+              <li>tools</li>
+              <li>tools</li>
+              <li>tools</li>
+            </div>
+            <div class="copyright">copyright &copy All rights reserved</div>
+            <div class="slinks">
+              <a href="https://twitter.com"><i class="fab fa-twitter fa-2x"></i></a>
+              <a href="https://instagram.com"><i class="fab fa-instagram fa-2x"></i></a>
+              <a href="https://linkedin.com"><i class="fab fa-linkedin-in fa-2x"></i></a>
+            </div>
+          </div>
+     </footer>
+
+
+
+</body>
+
+</html>

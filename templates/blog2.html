@@ -1,0 +1,222 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mystudies.com</title>
+    <link rel="stylesheet" href="{% static 'mainprojectapp/ml.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+</head>
+
+<body>
+    <!-- Navigation bar -->
+   <nav>
+    <img src="{% static 'mainprojectapp/logo.png' %}" alt="logo"><a href="/"></a>
+    <div class="navigation">
+       <ul>
+          <li><a href="/">home</a></li>
+          <!----------------------------------->
+          <li><a href="#">CSE<i class="fas fa-caret-down"></i></a>
+          <ul>
+             <li><a href="/blog">blog<a></li>
+             <li><a href="/blog1">blog1</a></li>
+             <li><a href="/blog2">blog2</a></li>
+          </ul>
+          </li>
+          <!------------------------------------>
+          <li><a href="#">ESE<i class="fas fa-caret-down"></i></a>
+             <ul>
+                <li><a href="/blog3">blog3<a></li>
+                <li><a href="/blog4">blog4</a></li>
+                <li><a href="/blog5">blog5</a></li>
+             </ul>
+             </li>
+             <!---------------------------------->
+             <li><a href="#">CHE<i class="fas fa-caret-down"></i></a>
+                <ul>
+                   <li><a href="/blog6">blog6<a></li>
+                   <li><a href="/blog7">blog7</a></li>
+                   <li><a href="/blog8">blog8</a></li>
+                </ul>
+                </li>
+             
+                <li><a href="#">BTE<i class="fas fa-caret-down"></i></a>
+                   <ul>
+                      <li><a href="/blog9">blog9<a></li>
+                      <li><a href="/blog10">blog10</a></li>
+                      <li><a href="/blog11">blog11</a></li>
+                   </ul>
+                   </li>
+             
+       </ul>
+    </div>
+    {% if user.is_authenticated %}
+
+    <div style = "margin-left: 400px;">
+    {{user.username}}
+    </div>
+    <div class="logout-container" style = "Display:flex;">
+          
+       <button type="submit" class="logout"><a href='/logout'>Logout</a></button><!--logout-->
+   </div>
+    {% else %}
+    <div class="login-container">
+         <button type="button" class="signup"><a href ='/signup'>Signup</a></button><!--signup-->
+         <button type="submit" class="login"><a href='/login'>Login</a></button><!--login-->         
+     </div>
+    {% endif %} 
+ </nav>
+
+{% comment %} navbar end {% endcomment %}
+
+    <div class="page">
+        <div class="social">
+            <h2 style="font-family:montserret ; border-bottom: 2px solid black;">Share</h2>
+            <a href="https://facebook.com"><img src="{% static 'mainprojectapp/facebook.png' %}" alt=""></a>
+            <a href="https://instagram.com"><img src="{% static 'mainprojectapp/instagram.png' %}" alt=""></a>
+            <a href="https://twitter.com"><img src="{% static 'mainprojectapp/twitter.png' %}" alt=""></a>
+
+
+            <p class="what">
+            <h1
+                style="text-decoration: underline; color: green; letter-spacing: .2rem; text-transform: uppercase; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                What's&nbspNew</h1>
+            </p>
+            <p style="margin-top:10px; ">
+            <h3 style="border-bottom: 1px solid grey;">ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+                rem?<br>... <a href="/blog11" style="color: rgb(167, 165, 165); font-family: raleway;">Read more</a></h3>
+            </p>
+            <p style="margin-top:10px; ">
+            <h3 style="border-bottom: 1px solid grey;">ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+                rem?<br>... <a href="/blog3" style="color: rgb(167, 165, 165); font-family: raleway;">Read more</a></h3>
+            </p>
+            <p style="margin-top:10px; ">
+            <h3 style="border-bottom: 1px solid grey;">ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+                rem?<br>... <a href="/blog9" style="color: rgb(167, 165, 165); font-family: raleway;">Read more</a></h3>
+            </p>
+        </div>
+
+        <!-- blog start-->
+
+        <div class="blog">
+            <center>
+                <div class="heading">
+                    <p>
+                    <h1
+                        style="text-decoration: underline; margin-bottom: 20px; text-transform: uppercase; text-shadow: 5px; text-decoration: underline; color: rgb(2, 3, 3); font-family: Georgia, 'Times New Roman', Times, serif;">
+                        Machine Learning</h1>
+                    </p>
+                    <h4 style="text-align:left; margin-left: 100px; margin-bottom: 10px; color: rgb(186, 179, 179);">
+                        EDITED ON:- 15-07-6574</h4>
+                </div>
+            </center>
+            <center>
+                <div class="para">
+                    <img src="#" alt="">
+                    <p>What is machine learning?
+                        Machine learning is a branch of artificial intelligence (AI) and computer science which focuses
+                        on the use of data and algorithms to imitate the way that humans learn, gradually improving its
+                        accuracy. <br>
+
+                        IBM has a rich history with machine learning. One of its own, Arthur Samuel, is credited for
+                        coining the term, “machine learning” with his research (PDF, 481 KB) (link resides outside IBM)
+                        around the game of checkers. Robert Nealey, the self-proclaimed checkers master, played the game
+                        on an IBM 7094 computer in 1962, and he lost to the computer. Compared to what can be done
+                        today, this feat seems trivial, but it’s considered a major milestone in the field of artificial
+                        intelligence. <br><br>
+
+                        <img src="{% static 'mainprojectapp/mll.png' %}" alt="" style="width: 600px; height:400px; margin-left: 30px;"
+                            class="center"><br><br>
+
+                        Over the last couple of decades, the technological advances in storage and processing power have
+                        enabled some innovative products based on machine learning, such as Netflix’s recommendation
+                        engine and self-driving <br>
+
+                        Machine learning is an important component of the growing field of data science. Through the use
+                        of statistical methods, algorithms are trained to make classifications or predictions, and to
+                        uncover key insights in data mining projects. These insights subsequently drive decision making
+                        within applications and businesses, ideally impacting key growth metrics. As big data continues
+                        to expand and grow, the market demand for data scientists will increase. They will be required
+                        to help identify the most relevant business questions and the data to answer them.
+                        <br>
+                        Machine learning algorithms are typically created using frameworks that accelerate solution
+                        development, such as TensorFlow and PyTorch. <br>
+
+                        Since deep learning and machine learning tend to be used interchangeably, it’s worth noting the
+                        nuances between the two. Machine learning, deep learning, and neural networks are all sub-fields
+                        of artificial intelligence. However, neural networks is actually a sub-field of machine
+                        learning, and deep learning is a sub-field of neural networks. <br>
+
+                        The way in which deep learning and machine learning differ is in how each algorithm learns.
+                        "Deep" machine learning can use labeled datasets, also known as supervised learning, to inform
+                        its algorithm, but it doesn’t necessarily require a labeled dataset. Deep learning can ingest
+                        unstructured data in its raw form (e.g., text or images), and it can automatically determine the
+                        set of features which distinguish different categories of data from one another. This eliminates
+                        some of the human intervention required and enables the use of larger data sets. You can think
+                        of deep learning as "scalable machine learning" as Lex Fridman notes in this MIT lecture
+                        (01:08:05) (link resides outside IBM). <br>
+
+                        Classical, or "non-deep", machine learning is more dependent on human intervention to learn.
+                        Human experts determine the set of features to understand the differences between data inputs,
+                        usually requiring more structured data to learn.
+                    </p>
+                    <h2
+                        style="margin-top: 50px; margin-right : 150px;text-align: right; letter-spacing: 2px; font-size: 30px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-decoration: underline;">
+                        Author:- Raptor
+                    </h2>
+                </div>
+
+            </center>
+        </div>
+    </div>
+
+    <!-- blog ends here -->
+
+    <!-- footer -->
+    <footer>
+        <div class="footercol">
+            <img src="{% static 'mainprojectapp/tlogo.png' %}" alt="logo">
+          </div>
+          <div class="footercol">
+              <h3>top products</h3>
+              <li>management</li>
+              <li>tools</li>
+              <li>tools</li>
+              <li>tools</li>
+            </div>
+            <div class="footercol">
+              <h3>top products</h3>
+              <li>management</li>
+              <li>tools</li>
+              <li>tools</li>
+              <li>tools</li>
+            </div>
+            <div class="footercol">
+              <h3>top products</h3>
+              <li>management</li>
+              <li>tools</li>
+              <li>tools</li>
+              <li>tools</li>
+            </div>
+            <div class="footercol">
+              <h3>top products</h3>
+              <li>management</li>
+              <li>tools</li>
+              <li>tools</li>
+              <li>tools</li>
+            </div>
+            <div class="copyright">copyright &copy All rights reserved</div>
+            <div class="slinks">
+              <a href="https://twitter.com"><i class="fab fa-twitter fa-2x"></i></a>
+              <a href="https://instagram.com"><i class="fab fa-instagram fa-2x"></i></a>
+              <a href="https://linkedin.com"><i class="fab fa-linkedin-in fa-2x"></i></a>
+            </div>
+          </div>
+     </footer>
+
+
+</body>
+
+</html>

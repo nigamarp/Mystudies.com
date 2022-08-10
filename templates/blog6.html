@@ -1,0 +1,182 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mystudies.com</title>
+    <link rel="stylesheet" href="{% static 'mainprojectapp/blog.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+</head>
+
+<body>
+    <!-- Navigation bar -->
+   <nav>
+    <img src="{% static 'mainprojectapp/logo.png' %}" alt="logo"><a href="/"></a>
+    <div class="navigation">
+       <ul>
+          <li><a href="/">home</a></li>
+          <!----------------------------------->
+          <li><a href="#">CSE<i class="fas fa-caret-down"></i></a>
+          <ul>
+             <li><a href="/blog">blog<a></li>
+             <li><a href="/blog1">blog1</a></li>
+             <li><a href="/blog2">blog2</a></li>
+          </ul>
+          </li>
+          <!------------------------------------>
+          <li><a href="#">ESE<i class="fas fa-caret-down"></i></a>
+             <ul>
+                <li><a href="/blog3">blog3<a></li>
+                <li><a href="/blog4">blog4</a></li>
+                <li><a href="/blog5">blog5</a></li>
+             </ul>
+             </li>
+             <!---------------------------------->
+             <li><a href="#">CHE<i class="fas fa-caret-down"></i></a>
+                <ul>
+                   <li><a href="/blog6">blog6<a></li>
+                   <li><a href="/blog7">blog7</a></li>
+                   <li><a href="/blog8">blog8</a></li>
+                </ul>
+                </li>
+             
+                <li><a href="#">BTE<i class="fas fa-caret-down"></i></a>
+                   <ul>
+                      <li><a href="/blog9">blog9<a></li>
+                      <li><a href="/blog10">blog10</a></li>
+                      <li><a href="/blog11">blog11</a></li>
+                   </ul>
+                   </li>
+             
+       </ul>
+    </div>
+    {% if user.is_authenticated %}
+
+    <div style = "margin-left: 400px;">
+    {{user.username}}
+    </div>
+    <div class="logout-container" style = "Display:flex;">
+          
+       <button type="submit" class="logout"><a href='/logout'>Logout</a></button><!--logout-->
+   </div>
+    {% else %}
+    <div class="login-container">
+         <button type="button" class="signup"><a href ='/signup'>Signup</a></button><!--signup-->
+         <button type="submit" class="login"><a href='/login'>Login</a></button><!--login-->         
+     </div>
+    {% endif %} 
+ </nav>
+
+{% comment %} navbar end {% endcomment %}
+
+    <div class="page">
+        <div class="social">
+            <h2 style="font-family:montserret ; border-bottom: 2px solid black;">Share</h2>
+            <a href="https://facebook.com"><img src="{% static 'mainprojectapp/facebook.png' %}" alt=""></a>
+            <a href="https://instagram.com"><img src="{% static 'mainprojectapp/instagram.png' %}" alt=""></a>
+            <a href="https://twitter.com"><img src="{% static 'mainprojectapp/twitter.png' %}" alt=""></a>
+
+
+            <p class="what">
+            <h1
+                style="text-decoration: underline; color: green; letter-spacing: .2rem; text-transform: uppercase; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                What's&nbspNew</h1>
+            </p>
+            <p style="margin-top:10px; ">
+            <h3 style="border-bottom: 1px solid grey;">ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+                rem?<br>... <a href="/blog1" style="color: rgb(167, 165, 165); font-family: raleway;">Read more</a></h3>
+            </p>
+            <p style="margin-top:10px; ">
+            <h3 style="border-bottom: 1px solid grey;">ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+                rem?<br>... <a href="/blog4" style="color: rgb(167, 165, 165); font-family: raleway;">Read more</a></h3>
+            </p>
+            <p style="margin-top:10px; ">
+            <h3 style="border-bottom: 1px solid grey;">ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis,
+                rem?<br>... <a href="/blog6" style="color: rgb(167, 165, 165); font-family: raleway;">Read more</a></h3>
+            </p>
+        </div>
+
+        <!-- blog start-->
+
+        <div class="blog">
+            <center>
+                <div class="heading">
+                    <p>
+                    <h1
+                        style="text-decoration: underline; margin-bottom: 20px; text-transform: uppercase; text-shadow: 5px; text-decoration: underline; color: rgb(2, 3, 3); font-family: Georgia, 'Times New Roman', Times, serif;">
+                        <center><em>5G Technology</em></center>
+                    </h1>
+                    </p>
+                    <h4 style="text-align:left; margin-left: 100px; margin-bottom: 10px; color: rgb(186, 179, 179);">
+                        EDITED ON:- 22-07-2022</h4>
+                </div>
+            </center>
+            <center>
+                <div class="para">
+                    <img src="#" alt="">
+                    <p style="font-size: 20px;"><b>What is 5G?</b> <br>
+                        In telecommunications, 5G is the fifth-generation technology standard for broadband cellular networks, which cellular phone companies began deploying worldwide in 2019, and is the planned successor to the 4G networks which provide connectivity to most current cellphones. 5G networks are predicted to have more than 1.7 billion subscribers worldwide by 2025, according to the GSM Association.
+                        <br><br>
+                        <img src="{% static 'mainprojectapp/5g.jpg' %}" alt="" style=" width: 600px; height:400px; margin-left: 30px;" class="center"><br><br>
+                        Like its predecessors, 5G networks are cellular networks, in which the service area is  divided into small geographical areas called cells. All 5G wireless devices in a cell are connected to the Internet and telephone network by radio waves through a local antenna in the cell. The new networks have higher download speeds, eventually up to 10 gigabits per second (Gbit/s).[2] In addition to 5G being faster than existing networks, 5G has higher bandwidth and can thus connect more different devices, improving the quality of Internet services in crowded areas.[3] Due to the increased bandwidth, it is expected the networks will increasingly be used as general internet service providers (ISPs) for laptops and desktop computers, competing with existing ISPs such as  cable internet, and also will make possible new applications in internet-of-things (IoT) and machine-to-machine areas. Cellphones with 4G capability alone are not able to use the 5G networks, as they are not backwards compatible with 4G.
+                    </p>
+                    <h2
+                        style="margin-top: 50px; margin-right : 150px;text-align: right; letter-spacing: 2px; font-size: 30px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-decoration: underline;">
+                        Author:- Aldal Phelics
+                    </h2>
+                </div>
+
+            </center>
+        </div>
+    </div>
+
+    <!-- blog ends here -->
+
+    <!-- footer -->
+    <footer>
+        <div class="footercol">
+            <img src="{% static 'mainprojectapp/tlogo.png' %}" alt="logo">
+          </div>
+          <div class="footercol">
+              <h3>top products</h3>
+              <li>management</li>
+              <li>tools</li>
+              <li>tools</li>
+              <li>tools</li>
+            </div>
+            <div class="footercol">
+              <h3>top products</h3>
+              <li>management</li>
+              <li>tools</li>
+              <li>tools</li>
+              <li>tools</li>
+            </div>
+            <div class="footercol">
+              <h3>top products</h3>
+              <li>management</li>
+              <li>tools</li>
+              <li>tools</li>
+              <li>tools</li>
+            </div>
+            <div class="footercol">
+              <h3>top products</h3>
+              <li>management</li>
+              <li>tools</li>
+              <li>tools</li>
+              <li>tools</li>
+            </div>
+            <div class="copyright">copyright &copy All rights reserved</div>
+            <div class="slinks">
+              <a href="https://twitter.com"><i class="fab fa-twitter fa-2x"></i></a>
+              <a href="https://instagram.com"><i class="fab fa-instagram fa-2x"></i></a>
+              <a href="https://linkedin.com"><i class="fab fa-linkedin-in fa-2x"></i></a>
+            </div>
+          </div>
+     </footer>
+
+
+</body>
+
+</html>

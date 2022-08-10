@@ -1,0 +1,141 @@
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'mainprojectapp/login.css' %}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+</head>
+
+<body>
+   <!-- Navigation bar -->
+   <nav>
+    <img src="{% static 'mainprojectapp/logo.png' %}" alt="logo"><a href="/"></a>
+    <div class="navigation">
+       <ul>
+          <li><a href="/">home</a></li>
+          <!----------------------------------->
+          <li><a href="#">CSE<i class="fas fa-caret-down"></i></a>
+          <ul>
+             <li><a href="/blog">blog<a></li>
+             <li><a href="/blog1">blog1</a></li>
+             <li><a href="/blog2">blog2</a></li>
+          </ul>
+          </li>
+          <!------------------------------------>
+          <li><a href="#">ESE<i class="fas fa-caret-down"></i></a>
+             <ul>
+                <li><a href="/blog3">blog3<a></li>
+                <li><a href="/blog4">blog4</a></li>
+                <li><a href="/blog5">blog5</a></li>
+             </ul>
+             </li>
+             <!---------------------------------->
+             <li><a href="#">CHE<i class="fas fa-caret-down"></i></a>
+                <ul>
+                   <li><a href="/blog6">blog6<a></li>
+                   <li><a href="/blog7">blog7</a></li>
+                   <li><a href="/blog8">blog8</a></li>
+                </ul>
+                </li>
+             
+                <li><a href="#">BTE<i class="fas fa-caret-down"></i></a>
+                   <ul>
+                      <li><a href="/blog9">blog9<a></li>
+                      <li><a href="/blog10">blog10</a></li>
+                      <li><a href="/blog11">blog11</a></li>
+                   </ul>
+                   </li>
+             
+       </ul>
+    </div>
+    {% if user.is_authenticated %}
+
+    <div style = "margin-left: 400px;">
+    {{user.username}}
+    </div>
+    <div class="logout-container" style = "Display:flex;">
+          
+       <button type="submit" class="logout"><a href='/logout'>Logout</a></button><!--logout-->
+   </div>
+    {% else %}
+    <div class="login-container">
+         <button type="button" class="signup"><a href ='/signup'>Signup</a></button><!--signup-->
+         <button type="submit" class="login"><a href='/login'>Login</a></button><!--login-->         
+     </div>
+    {% endif %} 
+ </nav>
+
+{% comment %} navbar end {% endcomment %}
+<div class="row">
+    <div class="col-1">
+        <div class="form-box">
+            <div class="form">
+                <form class="login-form" action='login_data' method="POST">
+                  {% csrf_token %}
+              <center><h1 class="main-heading">Login</h1></center>
+            <input type="text" placeholder="user name" name="username"/>
+            <input type="password" placeholder="password" name="password"/>
+            <button type="submit" >LOGIN</button>
+            <p class="message">Not Registered? <a href="/signup">Register</a></p>
+        </form>
+        <p id="message">
+           {% for message in messages%}
+            {{message}}
+          {%endfor%}   
+        </p>
+       </div>
+      </div>
+    </div>
+</div>
+</div>
+</div>
+    
+<!-- footer -->
+<footer>
+    <div class="footercol">
+        <img src="{% static 'mainprojectapp/tlogo.png' %}" alt="logo">
+      </div>
+      <div class="footercol">
+          <h3>top products</h3>
+          <li>management</li>
+          <li>tools</li>
+          <li>tools</li>
+          <li>tools</li>
+        </div>
+        <div class="footercol">
+          <h3>top products</h3>
+          <li>management</li>
+          <li>tools</li>
+          <li>tools</li>
+          <li>tools</li>
+        </div>
+        <div class="footercol">
+          <h3>top products</h3>
+          <li>management</li>
+          <li>tools</li>
+          <li>tools</li>
+          <li>tools</li>
+        </div>
+        <div class="footercol">
+          <h3>top products</h3>
+          <li>management</li>
+          <li>tools</li>
+          <li>tools</li>
+          <li>tools</li>
+        </div>
+        <div class="copyright">copyright &copy All rights reserved</div>
+        <div class="slinks">
+          <a href="https://twitter.com"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="https://instagram.com"><i class="fab fa-instagram fa-2x"></i></a>
+          <a href="https://linkedin.com"><i class="fab fa-linkedin-in fa-2x"></i></a>
+        </div>
+      </div>
+ </footer>
+
+</body>
+
+</html>
